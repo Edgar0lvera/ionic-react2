@@ -3,14 +3,15 @@ import { IonRow, IonCol, IonCard, IonCardContent} from '@ionic/react';
 
 
 const BmiResults: React.FC<{ 
-    result: number | string
+    result: number 
 }> =  props => {
     return (
         <IonRow>
             <IonCol>
                 <IonCard>
-                    <IonCardContent>
-                        <h2>{props.result}</h2>
+                    <IonCardContent className='ion-text-center'>
+                        <h2>Your BMI</h2>
+                        <h3>{props.result.toFixed(2)}</h3>
                     </IonCardContent>
                 </IonCard>
             </IonCol>
